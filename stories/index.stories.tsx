@@ -1,11 +1,16 @@
 import * as React from "react";
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Thing from "../src/ui";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Button } from "../src";
 
 export default {
-    title: 'UI/Thing',
-    component: Thing,
-} as ComponentMeta<typeof Thing>;
+  title: "UI/Button",
+  component: Button,
+} as ComponentMeta<any>;
 
-export const Primary: ComponentStory<typeof Thing> = () => <Thing />
-Primary.storyName = 'Thing'
+export const Primary: ComponentStory<typeof Button> = () => (
+  <Button type="button" onClickCapture={() => alert("Clicked")}>
+    Click Me!
+  </Button>
+);
+
+Primary.storyName = "Button";
